@@ -9,5 +9,5 @@ then
     FILEPATH=${FILEPATH/"~"/"/home/cengels"}
     gnome-terminal --working-directory=$FILEPATH
 else
-    i3-sensible-terminal
+    gnome-terminal
 fi
