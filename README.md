@@ -4,6 +4,17 @@ Launches a terminal based on the directory of the currently focused IntelliJ win
 ## How it works
 This terminal grabs the title of the currently focused IntelliJ window and extracts the directory path. Therefore, if your IntelliJ windows for some reason do not include the directory path in them, this script will not work.
 
+If the script cannot find a focused IntelliJ window, it will automatically launch a new terminal in your home directory. Therefore, this script can serve as a complete replacement for your standard terminal launch shortcut.
+
+Due to the fact this script grabs the focused window, you cannot run this script inside a terminal. Instead you'll need to define a shortcut (see below).
+
+## Installation
+1. Download `shell.sh` or copy its contents and paste them into a new `.sh` file.
+2. Place that file in `/usr/local/bin` (or another directory of your choice).
+3. Enter your window manager's config file.
+4. Add a new line, defining a shortcut key that points to the file you just created. If you placed the script in `/usr/local/bin`, you only need to specify the script's name, not the full path.  
+For instance, in i3 that config line could look like this: `bindsym $mod+Return exec shell.sh`
+
 ## Setup
 This script is, by default, tailored toward i3 users using bash and the default gnome-terminal. If your setup differs, you may have to customize the script.
 
